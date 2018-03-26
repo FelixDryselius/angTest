@@ -37,6 +37,7 @@
 <button (click)="onClick()">Suck me</button>
 
 
+
 <h2> Hobbies: </h2>
 <form (submit)="addHobby(hobby.value)">
   <div>
@@ -49,3 +50,9 @@
   <li *ngFor="let hobby of hobbies; let i =index">
     {{i+1}}: {{hobby}} <button (click)="deleteHobby(hobby)">DEL</button></li>
 </ul>
+
+<h1>Posts</h1>
+<div *ngFor="let post of posts">
+  <h4>{{ post.title }}</h4>
+  <p> {{ post.body }}</p>
+</div>
