@@ -13,6 +13,7 @@ export class UserComponent implements OnInit {
   address:Address;
   hobbies:string[];
   posts:Posts[];
+  isEdit: Boolean = false;
 
   constructor(private dataService:DataService) { }
 
@@ -34,6 +35,9 @@ export class UserComponent implements OnInit {
     console.log("lololololol");
     this.hobbies.push("Olja Oh olja");
     
+  }
+  toggleEdit(){  
+    this.isEdit = !this.isEdit;
   }
 
   addHobby(hobby){
